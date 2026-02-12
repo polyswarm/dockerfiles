@@ -1,5 +1,5 @@
-# Last modified: 2025-01-19T16:37:24.741442+00:00
-FROM demisto/python3-deb:3.12.7.117935
+# Last modified: 2025-09-26T16:38:42.136225+00:00
+FROM demisto/python3-deb-bullseye:3.12.11.5107758
 
 WORKDIR "/app"
 
@@ -45,6 +45,4 @@ RUN chown -R root:demisto /app/ && chmod 775 /app/ && chmod 775 /app/dist
 
 RUN npm uninstall -g npm && apt-get purge -y --auto-remove git npm apt-transport-https ca-certificates gnupg curl google-cloud-sdk \
     python3-dev \
-    python3.9 \
-    python3.9-minimal \
     && rm -rf /var/lib/apt/lists/*

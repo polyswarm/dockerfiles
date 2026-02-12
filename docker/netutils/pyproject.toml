@@ -13,7 +13,8 @@ python-libnmap = "*"
 websockets = ">=12.0.0"
 dnspython = "*"
 aiohttp = "*"
-psutil = "7.0.0"
+aiolimiter = "*"
+psutil = "7.1.3"
 
 [build-system]
 requires = ["poetry-core"]
